@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Movie app</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/styles/app.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <section id="user-input" class="card p-4 rounded-xl my-8 mx-auto">
+        <div class="m-4">
+          <label class="font-bold block" for="title">Add a Movie</label>
+          <input class="block w-full mt-4 mb-4 p-2 border-b-2 border-solid rounded-lg" type="text" id="title" maxlength="30" placeholder="i.e. Braveheart" />
+          <p id="validation-error" class="italic mt-4"></p>
+        </div>
+        <div>
+          <div class="flex justify-center sm:block sm:justify-start"><button class=" w-1/2 border-solid border-1 py-4 px-8 ml-0 rounded-md cursor-pointer text-white whitespace-nowrap font-bold sm:ml-4 sm:w-auto" id="add-movie-btn">Add Movie</button></div>
+          <p class="latest-entry-title font-bold text-center my-4 block">Latest Entry: <span id="latest-entry" class="font-bold"></span></p>
+        </div>
+      </section>
+      <section id="filter" class="card p-4 rounded-xl my-8 mx-auto">
+        <div class="m-4">
+          <label class="font-bold block" for="filter-title">Find by Title</label>
+          <input class="block w-full mt-4 mb-4 p-2 border-b-2 border-solid rounded-lg" type="text" id="filter-title" maxlength="80" placeholder="i.e. Braveheart" value=""/>
+          <div class=" btn-container flex items-center w-full mx-auto justify-around sm:justify-start">
+            <button class="border-solid border-1 py-4 px-8 rounded-md cursor-pointer text-white whitespace-nowrap font-bold mr-0 sm:mr-5" id="filter-btn">Filter</button>
+            <button class="border-solid border-1 py-4 px-8 rounded-md cursor-pointer text-white whitespace-nowrap font-bold" id="search-btn">Search Info</button>
+          </div>
+          <p id="filter-search-error" class="italic mt-4"></p>
+        </div>
+      </section>
+      <ul id="movie-list" class="card list-none	p-4 rounded-xl my-8 mx-auto"></ul>
+      <div class="card grid-cols-1 gap-y-5 p-4 rounded-xl my-8 mx-auto sm:grid-cols-2 sm:gap-x-8" id="search-result"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/scripts/main.js"></script>
+  </body>
+</html>

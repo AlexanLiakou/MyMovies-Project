@@ -117,7 +117,7 @@ const searchMovieHandler = () => {
 
   if(movies.filter(movie => movie.info.title.includes(searchTerm))) {
     filterSearchError.style.display="none";
-    axios.get(`http://www.omdbapi.com/?apikey=${apiKey}&t=${searchTerm}`)
+    axios.get(`https://www.omdbapi.com/?apikey=${apiKey}&t=${searchTerm}`)
     .then (response => {
       console.log(response);
       if(response.data.Response==='True') {

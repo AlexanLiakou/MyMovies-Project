@@ -21,7 +21,10 @@
         </div>
         <div>
           <div class="flex justify-center sm:block sm:justify-start"><button class=" w-1/2 border-solid border-1 py-4 px-8 ml-0 rounded-md cursor-pointer text-white whitespace-nowrap font-bold sm:ml-4 sm:w-auto" id="add-movie-btn">Add Movie</button></div>
-          <p class="latest-entry-title font-bold text-center my-4 block">Latest Entry: <span id="latest-entry" class="font-bold"></span></p>
+          <p class="latest-entry-title font-bold text-center my-4 block font-bold">Latest Entry: <span id="latest-entry">-</span></p>
+          <p class="explain text-left text-sm italic my-4 text-white p-2 border-solid border-white border-3 block rounded-lg"> In this
+            section you can add movies to a list behind the scenes. You can check your latest entry above. The list disappears
+            on browser reload.</p>
         </div>
       </section>
       <section id="filter" class="card p-4 rounded-xl my-8 mx-auto">
@@ -32,6 +35,10 @@
             <button class="border-solid border-1 py-4 px-8 rounded-md cursor-pointer text-white whitespace-nowrap font-bold mr-0 sm:mr-5" id="filter-btn">Filter</button>
             <button class="border-solid border-1 py-4 px-8 rounded-md cursor-pointer text-white whitespace-nowrap font-bold" id="search-btn">Search Info</button>
           </div>
+          <p class="explain text-left text-sm italic my-4 text-white p-2 border-solid border-white border-3 block rounded-lg"> "Filter"
+            button filters your list by title. If your entry is valid, all movies with that title will appear below in a list. Choose
+            the desired movie from the list and press the "Search Info" button. Here, you can also search for a movie's info directly,
+            without adding it in the list in the previous section.</p>
           <p id="filter-search-error" class="italic mt-4"></p>
         </div>
       </section>

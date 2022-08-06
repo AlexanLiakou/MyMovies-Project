@@ -58,11 +58,12 @@ const filterMovieHandler = () => {
 
   /*searchResult.style.display="none";*/
 
-  if (movies.length != 0 && movies.filter(movie => movie.info.title.includes(filterTerm))) {
+  if (movies.length != 0 && movies.filter(movie => movie.info.title.includes(filterTerm)) && filterTerm !='') {
+
     if (movieList.innerHTML != ''){
       movieList.innerHTML = '';
     }
-    movieList.classList.add('visible');
+    
     filterSearchError.style.display="none";
     const filteredMovies = !filterTerm ? movies : movies.filter(movie => movie.info.title.includes(filterTerm));
 
@@ -75,7 +76,14 @@ const filterMovieHandler = () => {
       movieEl.innerHTML=`<p class="filtered-movie text-center p-2 rounded-lg" id="${movieId}">${text}</p>`;
       movieList.append(movieEl);
     });
-  } else {
+    if (movieList.innerHTML!='') {
+      movieList.classList.add('visible');
+    }else {
+      movieList.classList.remove('visible');
+      filterSearchError.style.display="block";
+      filterSearchError.textContent= "This movie is not in your list or your list is empty. Add a movie before filtering/searching."
+    }
+  }else {
     movieList.classList.remove('visible');
     filterSearchError.style.display="block";
     filterSearchError.textContent= "This movie is not in your list or your list is empty. Add a movie before filtering/searching."

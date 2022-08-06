@@ -70,6 +70,10 @@ button:active {
   font-size: 1.25rem;
 }
 
+.explain {
+  background-color: var(--primary-color);
+}
+
 #latest-entry {
   color: var(--text-color);
   font-size: 1.25rem;
